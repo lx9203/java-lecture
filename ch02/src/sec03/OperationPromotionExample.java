@@ -7,6 +7,7 @@ public class OperationPromotionExample {
 		byte byteValue1 = 10;
 		byte byteValue2 = 20;
 		byte byteValue3 = (byte)(byteValue1 + byteValue2);
+//		연산자가 들어가면 int로 변환되어 계산되므로 결과값은 int가 된다
 		int intValue1 = byteValue1 + byteValue2;
 		System.out.println(intValue1);
 		System.out.println(byteValue3);
