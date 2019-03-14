@@ -1,0 +1,14 @@
+package sec03;
+
+public class prectice05 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		byte byteValue = 10;
+		char charValue = 'A';
+		
+		int intValue = byteValue;
+		
+	}
+
+}
