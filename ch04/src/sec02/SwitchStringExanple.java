@@ -20,6 +20,7 @@ public class SwitchStringExanple {
 		default :
 			System.out.println("300만원");
 		}
+		scan.close();
 	}
 
 }
