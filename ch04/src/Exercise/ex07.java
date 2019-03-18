@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class ex07 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		boolean run = true;
 
 		int balance = 0;
