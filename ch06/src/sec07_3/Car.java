@@ -6,14 +6,14 @@ public class Car {
 	String color;
 	int maxSpeed;
 
-	Car() {
+	public Car() {
 	}
 
-	Car(String model) {
+	public Car(String model) {
 		this.model = model;
 	}
 
-	Car(String model, String color) {
+	public Car(String model, String color) {
 		this.model = model;
 		this.color = color;
 	}
