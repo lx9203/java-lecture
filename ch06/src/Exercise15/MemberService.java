@@ -1,4 +1,4 @@
-package Exercise;
+package Exercise15;
 
 public class MemberService {
 
