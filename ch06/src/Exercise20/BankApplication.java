@@ -2,8 +2,6 @@ package Exercise20;
 
 import java.util.Scanner;
 
-import Exercise.StudentScore;
-
 public class BankApplication {
 	private static Account[] accountArray = new Account[100];
 	private static Scanner scan = new Scanner(System.in);
