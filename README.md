@@ -12,3 +12,5 @@
 2019-03-19 SelfPrectice  
 2019-03-20 Chapter 06  
 2019-03-21 Chapter 07  
+2019-03-22 Chapter 08  
+2019-03-25 Chapter 10  
