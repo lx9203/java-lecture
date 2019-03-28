@@ -8,14 +8,23 @@ public class DateTimeInfoExample {
 		System.out.println(now);
 		
 		String strDateTime = now.getYear() + "년 ";
+		System.out.println(strDateTime);
 		strDateTime = now.getMonthValue() + "월 ";
+		System.out.println(strDateTime);
 		strDateTime = now.getDayOfMonth() + "일 ";
+		System.out.println(strDateTime);
 		strDateTime = now.getDayOfWeek() + " ";
+		System.out.println(strDateTime);
 		strDateTime = now.getHour() + "시 ";
+		System.out.println(strDateTime);
 		strDateTime = now.getMinute() + "분 ";
+		System.out.println(strDateTime);
 		strDateTime = now.getSecond() + "초 ";
+		System.out.println(strDateTime);
 		strDateTime = now.getNano() + "나노초 ";
+		System.out.println(strDateTime);
 		System.out.println(strDateTime + "\n");
+		System.out.println(strDateTime);
 		LocalDate nowDate = now.toLocalDate();
 		if (nowDate.isLeapYear()) {
 			System.out.println("올해는 윤년 : 2월은 29일까지 있습니다.");
