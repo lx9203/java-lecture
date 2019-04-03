@@ -1,6 +1,7 @@
 package basic02;
 
 import java.sql.*;
+import java.util.*;
 
 public class SongDAO {
 	private Connection conn;
@@ -42,6 +43,34 @@ public class SongDAO {
 			}
 		}
 		return song;
+	}
+
+	public List<SongDTO> selectAll() {
+		String query = "select * from song;";
+		PreparedStatement pStmt = null;
+		List<SongDTO> list = new ArrayList<SongDTO>();
+		try {
+			pStmt = conn.prepareStatement(query);
+			ResultSet rs = pStmt.executeQuery();
+
+			while (rs.next()) {
+				SongDTO song = new SongDTO();
+				song.setId(rs.getInt("id"));
+				song.setTitle(rs.getString("title"));
+				song.setLyrics(rs.getString("lyrics"));
+				list.add(song);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (pStmt != null && !pStmt.isClosed())
+					pStmt.close();
+			} catch (SQLException se) {
+				se.printStackTrace();
+			}
+		}
+		return list;
 	}
 
 	public void updateSong(SongDTO song) {
