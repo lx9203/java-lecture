@@ -6,7 +6,6 @@ public class MemberApplication {
 	public static void main(String[] args) {
 		MemberDAO eDao = new MemberDAO();
 		boolean run = true;
-
 		Scanner scanner = new Scanner(System.in);
 
 		while (run) {
