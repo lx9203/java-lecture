@@ -5,7 +5,7 @@ public class Member implements Comparable {
 	private String id;
 	private String password;
 	private int age;
-	
+
 	public Member(String name, String id, String password, int age) {
 		this.name = name;
 		this.id = id;
@@ -13,10 +13,6 @@ public class Member implements Comparable {
 		this.age = age;
 	}
 
-	public Member(int age) {
-		this.age = age;
-	}
-	
 	public Member() {
 	}
 
@@ -54,14 +50,16 @@ public class Member implements Comparable {
 
 	@Override
 	public int compareTo(Object o) {
-		Member m = (Member) o;
-		if (this.age > m.getAge()) {
-			return 1;
-		} else if (this.age < m.getAge()) {
-			return -1;
-		} else return 0;
+		if (o instanceof Member) {
+			Member m = (Member) o;
+			if (this.age > m.age) {
+				return 1;
+			} else if (this.age < m.age) {
+				return -1;
+			} else
+				return 0;
+		}
+		return 100;
 	}
-	
-	
-	
+
 }
