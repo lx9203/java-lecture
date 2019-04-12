@@ -20,3 +20,4 @@
 2019-04-08 Chapter 14  
 2019-04-09 Chapter 15  
 2019-04-11 Chapter 18  
+2019-04-12 Chapter 18 Exercise & OC
