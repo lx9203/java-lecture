@@ -1,4 +1,4 @@
-package basic04;
+package basic04_member;
 
 import java.sql.*;
 import java.util.*;
@@ -220,5 +220,38 @@ public class MemberDAO {
 			}
 		}
 	}
+	
+	 public MemberDTO selectOne(String query) {
+	    	PreparedStatement pStmt = null;
+	    	MemberDTO member = new MemberDTO();
+	    	try {
+				pStmt = conn.prepareStatement(query);
+				ResultSet rs = pStmt.executeQuery();
+				
+				while (rs.next()) {
+					member.setId(rs.getInt(1));
+					member.setPassword(rs.getString(2));
+					member.setName(rs.getString(3));
+					member.setBirthday(rs.getString(4));
+					member.setAddress(rs.getString(5));
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			} finally {
+				try {
+					if (pStmt != null && !pStmt.isClosed()) 
+						pStmt.close();
+				} catch (SQLException se) {
+					se.printStackTrace();
+				}
+			}
+	    	return member;
+	    }
+
+	public MemberDTO searchById(int memberId) {
+    	String sql = "select * from member where id=" + memberId + ";";
+    	MemberDTO mDto = selectOne(sql);
+    	return mDto;
+    }
 
 }

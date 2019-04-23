@@ -1,4 +1,4 @@
-package basic04;
+package basic04_member;
 
 import java.util.*;
 
